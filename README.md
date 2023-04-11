@@ -18,7 +18,7 @@ https://twitter.com/ea2cq/status/1123140949805338624
 ![usual_qo100_config](https://user-images.githubusercontent.com/96028811/231276602-08e6c666-9b68-42cc-bfd7-4a939a21beac.jpg)
 
 
-The amplifier has a Rx and a Tx path, lower and upper paths respectively, and multiplexer switches near the connectors. It is thoroughly explained by here:
+The amplifier has a Rx and a Tx path, lower and upper paths respectively, and multiplexer switches near the connectors. It is thoroughly explained here:
 https://rsaxvc.net/blog/2014/2/1/Inside_the_EDUP_EP-AB003_24GHz_Amplifier.html
 
  A handful of modifications have been proposeed for the QO-100 scenario. Some operators find it helpful to put the amplifier in permanent Tx mode to prevent it from switching back and forth in SSB mode when the carrier power drops in the silent breaks; others find it useful to bridge the switches to avoid the marginal loss of 0.5 dB.
