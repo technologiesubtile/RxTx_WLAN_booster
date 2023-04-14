@@ -58,3 +58,9 @@ Note that the receive path of the WLAN booster is likely to have better characte
 A typical scenario would be half duplex with a satellite dish antenna modified for 2.4 GHz as for QO-100 operation. In this case the LNB sould be unused and RX and Tx be done via the 2.4 GHz patch antenna. Also the dish would then be aiming slightly downward to obtain horizontal path as for terrestrial links.
 
 ![WP_20230304_15_47_10_Pro](https://user-images.githubusercontent.com/96028811/231277669-237445d3-3e47-4b5e-8d8a-8af53bd31fcc.jpg)
+
+It seems that a similar modification had been proposed by OM VK2XAX but i cannot find it. According to the discussion on the Amsat forum, 
+
+https://forum.amsat-dl.org/index.php?thread/242-tx-only-modification-on-commercial-wifi-booster/&pageNo=2
+
+he had replaced the input switch by 2 sma connectors right away. My modification is less invasive by leaving the existing connector as Rx/Tx auto switched port, whereas the added port is Rx only.
