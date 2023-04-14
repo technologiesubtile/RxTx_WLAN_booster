@@ -43,7 +43,7 @@ For this simply a pigtail is added at the end of the Rx path:
 ![P4102715](https://user-images.githubusercontent.com/96028811/231277157-b37cafb6-b07a-4fc9-aeca-1f7e48016013.jpg)
 
 
-The main concern is whether during Tx, the crosstalk into the newly added Rx port is small enough to not fry the input stage of our SDR; therefore an isolation damping measurement shall be performed. The input is a PLL synthesizer followed by two SPF5189z LNAs in series, to amplify the signal to the required 100 mW. At the output and the Rx input we connect power meters.
+The main concern is whether during Tx, the crosstalk into the newly added Rx port is small enough to not fry the input stage of our SDR; therefore an isolation damping measurement shall be performed. The input is a PLL synthesizer followed by two SPF5189z LNAs in series, to pre-amplify the 1 mW signal to the required 100 mW. At the output and the Rx input we connect power meters.
 
 ![isolation_damp_setup](https://user-images.githubusercontent.com/96028811/231277258-b1d405d1-59f2-43fb-ad53-2e3216d15fbe.jpg)
 
