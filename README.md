@@ -5,7 +5,7 @@ Today i decided to void the warranty of one of my WiFi boosters. It is a Edup EP
 
 In contrast to the QO-100 coniguration, here in this tutorial, the amplifier shall be modified for the particular use case where we want to transmit and receive through the same antenna at the same 2.4 GHz frequency with a SDR transceiver (e.g. Adalm Pluto), that has distinct ports for Rx and Tx. Therefore, we need to connect the distinct Rx and Tx ports of our Adalm Pluto to the amplifier somehow. Unfortunately our WLAN booster has only one port, so we will add another one to hook up our Pluto SDR transceiver.
 
-![alternative_setup](https://user-images.githubusercontent.com/96028811/231276531-4f1f53d6-c549-43c4-a847-95a397e26fc1.jpg)
+
 
 Today's modification is different from the typical QO-100 amateur satcom use: This satellite has different up-and downlink frequencies and the amplifier is used in the transmit path only. The receive path consists of a LNB that downconverts the 10 GHz to 739 MHz  and is connected to the receive input of a transceiver or SDR. Such setups are described by many ham operators. Links:
 
