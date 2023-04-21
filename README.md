@@ -48,21 +48,21 @@ The main concern is whether during Tx, the crosstalk into the newly added Rx por
 
 ![isolation_damp_setup](https://user-images.githubusercontent.com/96028811/231277258-b1d405d1-59f2-43fb-ad53-2e3216d15fbe.jpg)
 
-When hitting the input with the 100 mW required to get the 4W output power, we meausure 35.7 dBm at the antenna port and -2.5 dBm at the Rx port.  According to the datasheet of the AD9363 (https://www.analog.com/media/en/technical-documentation/data-sheets/AD9363.pdf table 10) , the Adalm Pluto has a maximum tolerable input power of +2.5 dBm. So it should be safe to hook it up to the Pluto SDR, provided that the booster switches fast enough so that the little burst power before switching to Tx mode is brief enough to not cause any damage to it. Enjoy at your own risk ! With devices that have a combined Rx/Tx port, the modified WLAN booster should work as before since we have not modified anything else. I recommend terminating any unused port with a dummy load.
+When hitting the input with the 100 mW required to get the 4W output power, we meausure 35.7 dBm at the antenna port and -2.5 dBm at the Rx port.  According to the datasheet of the AD9363 (https://www.analog.com/media/en/technical-documentation/data-sheets/AD9363.pdf table 10) , the Adalm Pluto has a maximum tolerable input power of +2.5 dBm. So it should be safe to hook it up to the Pluto SDR, provided that the booster switches fast enough (typically: microseconds, for compatibility with WLAN) so that the little burst power before switching to Tx mode is brief enough to not cause any damage to it. Enjoy at your own risk ! As an additional protection, an attenuator can be inserted into the receive path. According to the specifications, the receive path of the EP-AB003 booster has 10..12 dB gain. Therefore, inserting e.g. a 6 dB attenuator should still maintain the gain positive. With devices that have a combined Rx/Tx port, the modified WLAN booster should work as before since we have not modified anything else. The switching threshold might be increased. I recommend terminating the unused Rx port with a dummy load, to avoid that the open circuit SMA connector translates into a short at the soldering point.
 
 ![P4102728](https://user-images.githubusercontent.com/96028811/231277491-6d50c383-fec2-4d53-bca8-16491237cb84.jpg)
 
-The length of the pigtail may be optimised to n times half wavelength so that a open circuit on the SMA connector transforms also into a open circuit at the soildering point.
+Alternatively, the length of the pigtail may be optimised to n times half wavelength so that an open circuit on the SMA connector transforms also into a open circuit at the soldering point.
 
-Note that the receive path of the WLAN booster is likely to have better characteristics in terms of noise figure than for example a cheap WiFi module, and also features a SAW filter, so it not only boost Tx power but also improve reception.
+Note that the receive path of the WLAN booster is likely to have better characteristics in terms of noise figure than for example a cheap WiFi module, and also features a SAW filter, so it not only boost Tx power but also improves reception. Otherwise it would be useless if used only on one side of the communication link.
 
-A typical scenario would be half duplex with a satellite dish antenna modified for 2.4 GHz as for QO-100 operation. In this case the LNB sould be unused and RX and Tx be done via the 2.4 GHz patch antenna. Also the dish would then be aiming slightly downward to obtain horizontal path as for terrestrial links.
+A typical scenario would be half duplex with a satellite dish antenna modified for 2.4 GHz as for QO-100 operation. In this case the LNB sould be unused and RX and Tx be done via the 2.4 GHz patch antenna. Also the dish would then be aiming slightly downward to obtain horizontal path as for terrestrial links, or turned upside down with the feeder arm on top.
 
 ![WP_20230304_15_47_10_Pro](https://user-images.githubusercontent.com/96028811/231277669-237445d3-3e47-4b5e-8d8a-8af53bd31fcc.jpg)
 
 Similar mod by VK2XAX
 
-It seems that a similar modification had been proposed by OM VK2XAX but i cannot find it. According to the discussion on the Amsat forum, 
+It seems that a similar modification had been proposed by OM VK2XAX but i cannot find the original work. According to the discussion on the Amsat forum, 
 
 https://forum.amsat-dl.org/index.php?thread/242-tx-only-modification-on-commercial-wifi-booster/&pageNo=2
 
@@ -71,14 +71,14 @@ he had replaced the input switch by 2 sma connectors right away. My modification
 
 Amplifier for 1296 MHz with a similar connection scheme
 
-After sharing my modification online, i discovered, on the youtube channel Ham Radio DX, an amplifier by SG Labs for 1296 ham band that seems to have the same port configuration as ma EP-AB003 amplifier after modification. The newly added port corresponds to the RX(Opt) port of the SG Labs amplifier. Link: https://www.youtube.com/watch?v=5w8sGDdzz2I
+After sharing my modification online, i discovered, on the youtube channel Ham Radio DX, an amplifier by SG Labs for the 1296 MHz ham band that seems to have the same port configuration as my EP-AB003 amplifier after modification. The newly added port corresponds to the RX(Opt) port of the SG Labs amplifier. Link: https://www.youtube.com/watch?v=5w8sGDdzz2I
 
 ![sglabs1296diagram](https://user-images.githubusercontent.com/96028811/233620261-95f4f8d6-a22b-4830-b803-237896f96946.jpg)
 
 
 Further ideas and perspectives
 
-The receive path of our amplifier features a SAW filter that can be expected to be quite efficient in suppressing harmonics or other spurious components of the spectrum. If the amp is used for QO-100 and the receive path is not used as such, an idea would be to use it in the preamplification path to remove the harmonics of the SDR output. However, doing so requires measuring some characteristics that are not documented. The amplification is given as 10..12 dB but nothing is known about third order intercept and noise figure. If it can be used to output 0dBm, it could be hooked up between the Pluto output, preceded by a 10 dB attenuator, and followed by the 2 SPF 5189Z. However, it would also be interesting how much harmonics are generated by the finals, and to what extent they are attenuated by the impedance transformer that seems to be a slug to adapt the low impedance output of the transistors to the 50 Ohm line. Therefore additional measurements need to be performed with a spectrum analyzer.
+The receive path of our amplifier features a SAW filter that can be expected to be quite efficient in suppressing harmonics or other spurious components of the spectrum. If the amp is used for QO-100 and the receive path is not used as such, an idea would be to use it in the preamplification path to remove the harmonics of the SDR output. However, doing so requires measuring some characteristics that are not documented. The amplification is given as 10..12 dB but nothing is known about third order intercept and noise figure. If it can be used to output 0 dBm, it could be hooked up between the Pluto output, preceded by a 10 dB attenuator, and followed by the 2 SPF 5189Z. However, it would also be interesting how much harmonics are generated by the finals, and to what extent they are attenuated by the impedance transformer that seems to be a slug to adapt the low impedance output of the transistors to the 50 Ohm line. Therefore additional measurements need to be performed with a spectrum analyzer to evaluate the overall performance of such a configuration.
 
 
 Miscellaneous
