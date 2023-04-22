@@ -1,11 +1,11 @@
 # RxTx_WLAN_booster
 EP-AB003 WLAN booster mod for separate Rx/Tx ports
 
-Today i decided to void the warranty of one of my WiFi boosters. It is a Edup EP-AB003, and has realistically 4..5 W output power although advertised as 8W. It is designed to be hooked up behind a WLAN router and is half duplex. It has auto Rx/Tx switching by carrier detection and switches to Tx mode when the input power exceeds 3..5 dBm according to the manufacturer. 
+Today i decided to void the warranty of one of my WiFi boosters. It is a Edup EP-AB003, and has realistically 4..5 W output power although advertized as 8W. Its intended purpose is to be hooked up between a WLAN router and the antenna and it runs in half duplex mode. It has auto Rx/Tx switching by carrier detection and switches to Tx mode when the input power exceeds 3..5 dBm according to the manufacturer. 
 
 ![ep-ab003_hookup](https://user-images.githubusercontent.com/96028811/233800172-9518cb59-a7c8-4ad1-9c91-9f954610669c.jpg)
 
-The intended use as a WiFi booster is actually prohibited in most countries due to EIRP restrictions. In the United States a higher limit is authorized thaan in Europe. But the device is popular among ham radio operators as amplifier for Satcom using the QO-100 satellite. Mass produced for consumer market it is a lowcost alternative to dedicated ham radio amplifiers.
+The intended use as a WiFi booster is actually prohibited in most countries due to EIRP restrictions. In the United States a higher limit is authorized than in Europe. But the device is popular among ham radio operators as amplifier for Satcom using the QO-100 satellite. Mass produced for consumer market it is a lowcost alternative to dedicated ham radio amplifiers.
 
 In contrast to the QO-100 coniguration, here in this tutorial, the amplifier shall be modified for the particular use case where we want to transmit and receive through the same antenna at the same 2.4 GHz frequency with a SDR transceiver (e.g. Adalm Pluto), that has distinct ports for Rx and Tx. Therefore, we need to connect the distinct Rx and Tx ports of our Adalm Pluto to the amplifier somehow. Unfortunately our WLAN booster has only one port, so we will add another one to hook up our Pluto SDR transceiver.
 
