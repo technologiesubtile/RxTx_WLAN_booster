@@ -88,7 +88,7 @@ The receive path of our amplifier features a SAW filter that can be expected to 
 
 Miscellaneous
 
-For soldering, a small soldering iron (18 W) is suitable for soldering the core of the coax to the signal path of the GSG line; however, for soldering the shielding onto the ground plane, the small soldering iron revealed to be not enough powerful to melt the solder on the thermally conducting copper plane and a 100 W soldering gun was used instead. The coax pigtail soldered to the GSG lane cane easily cause a short circuit when the shielding touches the signal path. To verify, i recommend measuring the DC resistance on the SMA connector which should be approximately 92 Ohm. On some boosters it is hard to remove the back cover. In this case, i recommend, after removing the allen screws, force a 6 mm screw some turns into the hole to use it as a handle for pulling out the cover plate.
+For soldering, a small soldering iron (18 W) is suitable for soldering the core of the coax to the signal path of the GSG line; however, for soldering the shielding onto the ground plane, the small soldering iron revealed to be not enough powerful to melt the solder on the thermally conducting copper plane and a 100 W soldering gun was used instead. The coax pigtail soldered to the GSG lane cane easily cause a short circuit when the shielding touches the signal path. To verify, i recommend measuring the DC resistance on the SMA connector which should be approximately 92 Ohm. On some boosters it is hard to remove the back cover. In this case, i recommend, after removing the allen screws, to force a 6 mm screw some gears into one of the holes to use it as a handle for pulling out the cover plate.
 
 
 Disclaimer
