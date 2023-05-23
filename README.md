@@ -61,7 +61,21 @@ Alternatively, the length of the pigtail may be optimized to n times half wavele
 
 Note that the receive path of the WLAN booster is likely to have better characteristics in terms of noise figure than for example a cheap WiFi module, and also features a SAW filter, so it not only boosts Tx power but also improves reception. Otherwise it would be useless in extending WLAN range, if used only on one side of the communication link.
 
-A typical scenario of the modified booster would be half duplex terrestrial two-way communication, using a satellite dish antenna provided with the patch or helical feeder for 2.4 GHz as for QO-100 operation. In this case the LNB sould be unused and RX and Tx be done via the 2.4 GHz patch antenna. Also the dish would then be aiming slightly downward to obtain horizontal path as for terrestrial links, or turned upside down with the feeder arm on top.
+
+The cleanup
+
+In the end, everything is nicely put into a aluminum box.
+
+![mainframe front](https://github.com/technologiesubtile/RxTx_WLAN_booster/assets/96028811/2da7e2c0-3eb6-4cb4-9234-6f7f80f4469c)
+It contains power supply, bias T, the modified amplifier and a DC-DC converter that makes 5 V out of 12 V for the LNA preamps and additional accessories.
+
+![mainframe right](https://github.com/technologiesubtile/RxTx_WLAN_booster/assets/96028811/6b34a360-01f2-4e06-bd81-0791f265defe)
+The reason to step down from 12 V is the possibility to power everything from a car battery. Note that the converter is a dismantlede cigarette lighter to USB adapter that readily comes with the USB outlets.
+
+![mainframe_front_upper](https://github.com/technologiesubtile/RxTx_WLAN_booster/assets/96028811/ae275d16-ae30-4a8d-b799-7291349bf82b)
+An intermediate shelf plate can be inserted and the upper floor has place to hold a SDR, WLAN Router, Bluetooth Adapter or as shown here a PLL synthesizer used for testing the satellite uplink with a CW signal.
+
+A typical use scenario of the modified booster would be half duplex terrestrial two-way communication, using a satellite dish antenna provided with the patch or helical feeder for 2.4 GHz as for QO-100 operation. In this case the LNB sould be unused and RX and Tx be done via the 2.4 GHz patch antenna. Also the dish would then be aiming slightly downward to obtain horizontal path as for terrestrial links, or turned upside down with the feeder arm on top.
 
 ![WP_20230304_15_47_10_Pro](https://user-images.githubusercontent.com/96028811/231277669-237445d3-3e47-4b5e-8d8a-8af53bd31fcc.jpg)
 
