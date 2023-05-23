@@ -38,7 +38,7 @@ https://www.george-smart.co.uk/2019/03/limesdr-edup-pa/
 https://rfsparkling.com/blog/2019/08/30/modifying-edup-ep-ab007-4w-bi-directional-wifi-amplifier-for-oa-100-eshail-satellite-operation-non-stop-tx-mode/
 
 
-I myself do not find these modifications very rewarding because they are messy, the power output increase is marginal and if Tx input power is set to 100 mW full scale, the Tx should not drop out in the silent breaks anyway. So i will concentrate on adding a distinct port that connects to the Rx input of the SDR.
+Personally i do not find these modifications very rewarding because they are delicate or irreversible, the power output increase is marginal and if Tx input power is set to 100 mW full scale, the Tx should not drop out in the silent breaks anyway. So i will concentrate on adding a distinct port that connects to the Rx input of the SDR.
 
 ![P4022700](https://user-images.githubusercontent.com/96028811/231276899-d7849688-a6c9-4a83-8800-4f614ad572c6.JPG)
 
@@ -64,16 +64,22 @@ Note that the receive path of the WLAN booster is likely to have better characte
 
 The cleanup
 
-In the end, everything is nicely put into a aluminum box.
+In the end, everything is nicely put into an aluminum box.
 
 ![mainframe front](https://github.com/technologiesubtile/RxTx_WLAN_booster/assets/96028811/2da7e2c0-3eb6-4cb4-9234-6f7f80f4469c)
+
 It contains power supply, bias T, the modified amplifier and a DC-DC converter that makes 5 V out of 12 V for the LNA preamps and additional accessories.
 
+
 ![mainframe right](https://github.com/technologiesubtile/RxTx_WLAN_booster/assets/96028811/6b34a360-01f2-4e06-bd81-0791f265defe)
+
 The reason to step down from 12 V is the possibility to power everything from a car battery. Note that the converter is a dismantlede cigarette lighter to USB adapter that readily comes with the USB outlets.
 
+
 ![mainframe_front_upper](https://github.com/technologiesubtile/RxTx_WLAN_booster/assets/96028811/ae275d16-ae30-4a8d-b799-7291349bf82b)
+
 An intermediate shelf plate can be inserted and the upper floor has place to hold a SDR, WLAN Router, Bluetooth Adapter or as shown here a PLL synthesizer used for testing the satellite uplink with a CW signal.
+
 
 A typical use scenario of the modified booster would be half duplex terrestrial two-way communication, using a satellite dish antenna provided with the patch or helical feeder for 2.4 GHz as for QO-100 operation. In this case the LNB sould be unused and RX and Tx be done via the 2.4 GHz patch antenna. Also the dish would then be aiming slightly downward to obtain horizontal path as for terrestrial links, or turned upside down with the feeder arm on top.
 
